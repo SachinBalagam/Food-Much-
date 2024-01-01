@@ -1,0 +1,22 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 30px;
+  position: sticky;
+  top: 0;
+  background-color: #f0f0f0;
+}
+.logo {
+  width: 80px;
+}
+.list-container {
+  display: flex;
+  list-style-type: none;
+  font-family: "Roboto";
+}
+.nav {
+  margin-left: 20px;
+  font-size: 18px;
+  font-family: "Roboto";
+}

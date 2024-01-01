@@ -1,14 +1,36 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Header from "./src/components/Header/Header";
+import Body from "./src/components/Body/Body";
+import Menu from "./src/components/Menu/Menu";
 
-const Container = () => {
+const App = () => {
   return (
     <div>
-      <h1>Hello World!</h1>
+      <Header />
+      <Outlet />
     </div>
   );
 };
-export default Container;
+export default App;
+
+const Router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/menu",
+        element: <Menu />,
+      },
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Container />);
+root.render(<RouterProvider router={Router} />);

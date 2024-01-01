@@ -1,0 +1,15 @@
+.category-list {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid wheat;
+  overflow-x: auto;
+}
+.category {
+  margin-right: 40px;
+  font-family: "Roboto";
+  font-size: 20px;
+  cursor: pointer;
+}
